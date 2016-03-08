@@ -77,6 +77,8 @@ public class TrainerActivity extends AppCompatActivity {
         int minNumber = correctAnswer - 20;
         for(Button b : buttonList){
             if(!b.getText().equals(""+correctAnswer)){
+                //generates a random number that is 20 higher or lower than the correct answer
+                //so if correctAnswer equals 100, this will generate a number between 80 and 120 
                 b.setText( ""+(randomnizer.nextInt( maxNumber - minNumber + 1 ) + minNumber) );
             }
         }
